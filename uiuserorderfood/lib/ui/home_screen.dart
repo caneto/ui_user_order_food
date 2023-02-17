@@ -128,7 +128,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/item');
+                  },
                   child: Container(
                     padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
