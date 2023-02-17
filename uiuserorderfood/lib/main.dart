@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_user_order_food/ui/item_screen.dart';
 
 import 'ui/home_screen.dart';
 import 'ui/welcome_screen.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       home: const WelcomeScreen(),
       routes: {
         '/home': (_) => HomeScreen(),
+        '/item': (_) => ItemScreen(),
       },
     );
   }
