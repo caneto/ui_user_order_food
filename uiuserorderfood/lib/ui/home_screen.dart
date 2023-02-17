@@ -110,11 +110,19 @@ class HomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        hintText: 'Search your food here...',
-                        border: InputBorder.none,
-                        prefixIcon: Icon(Icons.search),
+                    child: Theme(
+                      data: Theme.of(context).copyWith(
+                        textSelectionTheme: const TextSelectionThemeData(
+                          cursorColor: Colors.red,
+                          selectionColor: Colors.blueAccent,
+                        ),
+                      ),
+                      child: TextFormField(
+                        decoration: const InputDecoration(
+                          hintText: 'Search your food here...',
+                          border: InputBorder.none,
+                          prefixIcon: Icon(Icons.search),
+                        ),
                       ),
                     ),
                   ),
