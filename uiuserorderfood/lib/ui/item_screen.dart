@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ItemScreen extends StatelessWidget {
@@ -156,8 +157,139 @@ class ItemScreen extends StatelessWidget {
                   ],
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Order',
+                        style: TextStyle(
+                            fontSize: 17,
+                            color: Colors.black45,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Row(
+                        children: const [
+                          Icon(
+                            Icons.add_circle_outline_rounded,
+                            color: Colors.black45,
+                          ),
+                          SizedBox(
+                            width: 2,
+                          ),
+                          Text(
+                            '01',
+                            style: TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 2,
+                          ),
+                          Icon(
+                            CupertinoIcons.minus_circle,
+                            color: Colors.black45,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: const [
+                      Text(
+                        'Delivery',
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black45,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Express',
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.green,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: const [
+                      Text(
+                        'Price',
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black45,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        '\$10.59',
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Color(0xFFFF2F08),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             )
           ],
+        ),
+      ),
+      bottomNavigationBar: InkWell(
+        onTap: () {},
+        child: Container(
+          height: 60,
+          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          decoration: BoxDecoration(
+            color: const Color(0xFFFF2F08),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text(
+                'Add to Cart',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              Icon(
+                Icons.add_circle_outline_rounded,
+                color: Colors.white,
+                size: 20,
+              )
+            ],
+          ),
         ),
       ),
     );
